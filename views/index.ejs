@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Passort</title>
+    </head>
+    <body>
+   <% if(!isAuthenticated) { %>
+   <a href="/login">login here</a>
+   <% }else { %>
+   Hello,<%=user.name %>!
+   <a href="/logout">Log out</a>  <a href="/public/index.html">หน้าหลัก</a>
+    <% } %>
+    </body>
+</html>     

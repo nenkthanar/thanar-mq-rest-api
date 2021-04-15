@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>Datalogs</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+<a href="index.html" id="about">Main</a>
+<a href="graph.html" id="blog">Graph</a>
+<a href="#" id="projects">Projects</a>
+<a href="#" id="contact">Contact</a>
+</div>
+
+<div class="main">
+  <h1>Data logs</h1><br><br>
+<div class="container">
+<canvas id="myChart" width="300" height="200"></canvas>
+</div>
+<div style="color: antiquewhite">
+<form>
+<div class="checkbox">
+<label><input type="checkbox" id="auto1" name="auto-save"  value="Auto save">Auto save</label>
+</div>
+<div class="checkbox">
+<label><input type="checkbox" id="auto2" name="auto-read"  value="Auto read">Auto read</label>
+</div>
+</form>
+</div>
+<div id="show-one" style="color: antiquewhite"></div><br><br>
+<div style="word-spacing:20px">
+<button onclick="draw_historyChart()" class="draw-button">Draw graph </button> <button  class="draw-button"onclick="destroy_history()">Destroy</button>
+</div><br>
+<div class="container">
+        <canvas id="history-chart" width="300" height="200"></canvas>
+</div>
+<script src="/public/js/maincontrol.js"></script>
+</body>
+</html> 
